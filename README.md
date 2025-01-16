@@ -43,8 +43,8 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 - **Referanslar** 
   - ![Referanslar](https://github.com/user-attachments/assets/6434f08e-cd4c-4981-b59a-8adcbc856b03)
 
--**İletişim**
-   -![İletişim](https://github.com/user-attachments/assets/74a67d97-873d-453b-980a-35dfd773304b)
+- **İletişim** 
+  - ![İletişim](https://github.com/user-attachments/assets/2813080f-e78a-40e3-9cc6-a212f1250f97)
 
 
 ## 🛠️ Admin Paneli
