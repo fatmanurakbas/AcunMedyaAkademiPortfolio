@@ -10,18 +10,18 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 - **Referanslarım**: Daha önceki iş deneyimlerim ve işbirliklerimden elde edilen geri bildirimler.
 - **İletişim**: Ziyaretçilerin benimle kolayca iletişim kurabileceği bir form.
 
-## 🛠️Teknolojiler
+## 🛠️ Teknolojik Altyapı
 
--🖥️**ASP.NET MVC**: Model-View-Controller yapısıyla dinamik ve modüler web uygulamaları geliştirme.
--📊**LINQ Sorguları**: Veri sorgulama ve manipülasyon işlemlerinde kullanılan güçlü sorgulama dili.
--📂**Db First Yaklaşımı**: Mevcut bir veritabanından model oluşturma yaklaşımı.
--🔄**CRUD İşlemleri**: Veritabanında Create, Read, Update ve Delete işlemlerini gerçekleştirme.
--🛠️**Partial View Kullanımı**: Kod tekrarını azaltmak için sayfa bileşenlerinin yeniden kullanılabilir kısımlarını oluşturma.
--📦**Entity Framework**: Veritabanı işlemlerini kolaylaştırmak için kullanılan ORM (Object-Relational Mapping) aracı.
--🌐**HTML, CSS, Bootstrap**: Kullanıcı arayüzünü tasarlamak ve duyarlı (responsive) tasarımlar oluşturmak için kullanılan teknolojiler.
--⚡**JavaScript**: Etkileşimli kullanıcı deneyimleri sunmak için kullanılan betik dili.
--💾**MSSQL Server**: Verilerin güvenli ve ölçeklenebilir bir şekilde saklandığı ilişkisel veritabanı yönetim sistemi.
--🖌️**Layout Yapılandırması**: Sayfa düzeni ve tasarım şablonlarının yapılandırılması.
+- 🖥️ **ASP.NET MVC**: Model-View-Controller yapısıyla dinamik ve modüler web uygulamaları geliştirme.
+- 📊 **LINQ Sorguları**: Veri sorgulama ve manipülasyon işlemlerinde kullanılan güçlü sorgulama dili.
+- 📂 **Db First Yaklaşımı**: Mevcut bir veritabanından model oluşturma yaklaşımı.
+- 🔄 **CRUD İşlemleri**: Veritabanında Create, Read, Update ve Delete işlemlerini gerçekleştirme.
+- 🛠️ **Partial View Kullanımı**: Kod tekrarını azaltmak için sayfa bileşenlerinin yeniden kullanılabilir kısımlarını oluşturma.
+- 📦 **Entity Framework**: Veritabanı işlemlerini kolaylaştırmak için kullanılan ORM (Object-Relational Mapping) aracı.
+- 🌐 **HTML, CSS, Bootstrap**: Kullanıcı arayüzünü tasarlamak ve duyarlı (responsive) tasarımlar oluşturmak için kullanılan teknolojiler.
+- ⚡ **JavaScript**: Etkileşimli kullanıcı deneyimleri sunmak için kullanılan betik dili.
+- 💾 **MSSQL Server**: Verilerin güvenli ve ölçeklenebilir bir şekilde saklandığı ilişkisel veritabanı yönetim sistemi.
+- 📑 **Layout Yapılandırması**: Sayfa düzeni ve tasarım şablonlarının yapılandırılması.
 
 ## 📸 Proje Görselleri
 
