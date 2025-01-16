@@ -1,0 +1,21 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.tblHobby
+@{
+    ViewBag.Title = "CreateHobby";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Yeni Hobby Ekleme</h2>
+<form method="post">
+    <label>Hobby ismi</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Hobby Görseli</label>   
+    <input type="file" name="Icon" class="form-control" />
+
+
+    <button class="btn btn-info">Projeyi Kaydet</button>
+</form>
+
+
+

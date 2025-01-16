@@ -1,0 +1,22 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Proje Güncelleme</h2>
+@using (Html.BeginForm("UpdateProject", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.ProjectID)
+
+    <label>Proje Adı</label>
+    @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+
+    <label>Fotoğraf Yükle</label>
+    <input type="file" name="ProjectImage" class="form-control" />
+
+    <label>Proje Kategorisi</label>
+    @Html.TextBoxFor(x => x.ProjectCategory, new { @class = "form-control" })
+
+    <button type="submit" class="btn btn-info">Projeyi Güncelle</button>
+}

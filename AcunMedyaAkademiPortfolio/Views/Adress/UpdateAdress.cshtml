@@ -1,0 +1,28 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblAdress
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Adres Güncelleme</h2>
+@using (Html.BeginForm("UpdateAdress", "Adress", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.AdressId)
+
+    <label>Adress</label>
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+
+    <label>Telefon No</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+
+
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+
+    <label>Website</label>
+    @Html.TextBoxFor(x => x.Website, new { @class = "form-control" })
+    <br/>
+    <button type="submit" class="btn btn-info">Adresi Güncelle</button>
+}
+

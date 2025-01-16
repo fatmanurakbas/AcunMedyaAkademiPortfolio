@@ -1,0 +1,23 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblFeature
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Özellik Güncelleme</h2>
+@using (Html.BeginForm("UpdateFeature", "Feature", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.FeatureId)
+
+    <label>Özellik Başlığı</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+
+    <label>Özellik Konusu</label>
+    @Html.TextBoxFor(x => x.FeatureSubtitle, new { @class = "form-control" })
+
+    <label>Fotoğraf Yükle</label>
+    <input type="file" name="FeatureImage" class="form-control" />
+    <br/>
+
+    <button type="submit" class="btn btn-info">Projeyi Güncelle</button>
+}

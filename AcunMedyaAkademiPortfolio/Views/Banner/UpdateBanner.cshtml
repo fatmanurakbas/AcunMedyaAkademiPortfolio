@@ -1,0 +1,22 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblBanner
+@{
+    ViewBag.Title = "UpdateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Afiş Güncelleme</h2>
+@using (Html.BeginForm("UpdateBanner", "Banner", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.BannerId)
+
+    <label>Afiş Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <label>Afiş Açıklaması</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+
+    <label>Fotoğraf Yükleme</label>
+    <input type="file" name="BannerImage" class="form-control" />
+    <br/>
+    <button type="submit" class="btn btn-info">Projeyi Güncelle</button>
+}

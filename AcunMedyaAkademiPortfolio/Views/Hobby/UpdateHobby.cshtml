@@ -1,0 +1,35 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.tblHobby
+
+@{
+    ViewBag.Title = "UpdateHobby";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hobby Güncelleme</h2>
+
+@using (Html.BeginForm("UpdateHobby", "Hobby", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Hobby İdsi</label>
+    @Html.HiddenFor(x => x.HobbyId)
+    <br />
+
+    <label>Hobby İsmi</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+
+    <label>Mevcut Icon</label>
+    <img src="@Model.IconUrl" alt="Icon" width="50" />
+    <br />
+
+    <label>Yeni Icon (Resim Seçin)</label>
+    <input type="file" name="Icon" class="form-control" />
+
+
+
+    <br />
+
+    <button class="btn btn-info">Hobby Güncelle</button>
+}
+
+

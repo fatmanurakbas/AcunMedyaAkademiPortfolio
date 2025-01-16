@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,14 +128,82 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\AdressController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
+    <Compile Include="Controllers\HobbyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaLinkController.cs" />
+    <Compile Include="Controllers\StaticticController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SocialMediaLink.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblAbout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblAdress.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblBanner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblCategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblFeature.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblHobby.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProfile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSkill.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblTestimonial.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,12 +227,53 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\About\about.jpg" />
+    <Content Include="images\Hobbys\kitap.png" />
+    <Content Include="images\Hobbys\music.png" />
+    <Content Include="images\Projects\AIkod.png" />
+    <Content Include="images\Projects\Bulut.png" />
+    <Content Include="images\Projects\geridönüsüm.png" />
+    <Content Include="images\Projects\HataTakip.png" />
+    <Content Include="images\Projects\KodPaylasim.png" />
+    <Content Include="images\Projects\planlama.png" />
+    <Content Include="images\Projects\saglik.png" />
+    <Content Include="images\Projects\Siber.png" />
+    <Content Include="images\Service\dijital.png" />
+    <Content Include="images\Service\GrafikTasarim.png" />
+    <Content Include="images\Service\Mobil.png" />
+    <Content Include="images\Service\sosyalmedya.png" />
+    <Content Include="images\Service\video.png" />
+    <Content Include="images\Service\WebGelistirme.png" />
+    <Content Include="images\Service\YapayZeka.png" />
+    <Content Include="images\Service\ücD.png" />
+    <Content Include="images\Testimonial\Ali.jpg" />
+    <Content Include="images\Testimonial\Beyza.jpg" />
+    <Content Include="images\Testimonial\BuseDemirtas.jpg" />
+    <Content Include="images\Testimonial\Gökhan.jpg" />
+    <Content Include="images\Testimonial\Murat.jpg" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -168,6 +285,56 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\clyde-master\css\ajax-loader.gif" />
+    <Content Include="Template\clyde-master\css\animate.css" />
+    <Content Include="Template\clyde-master\css\aos.css" />
+    <Content Include="Template\clyde-master\css\bootstrap.min.css" />
+    <Content Include="Template\clyde-master\css\flaticon.css" />
+    <Content Include="Template\clyde-master\css\magnific-popup.css" />
+    <Content Include="Template\clyde-master\css\owl.carousel.min.css" />
+    <Content Include="Template\clyde-master\css\owl.theme.default.min.css" />
+    <Content Include="Template\clyde-master\css\style.css" />
+    <Content Include="Template\clyde-master\fonts\flaticon\backup.txt" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Template\clyde-master\fonts\flaticon\license\license.html" />
+    <Content Include="Template\clyde-master\images\About.jpg" />
+    <Content Include="Template\clyde-master\images\bg_3.jpg" />
+    <Content Include="Template\clyde-master\images\bg_4.jpg" />
+    <Content Include="Template\clyde-master\images\Feature.jpg" />
+    <Content Include="Template\clyde-master\images\image_1.jpg" />
+    <Content Include="Template\clyde-master\images\image_2.jpg" />
+    <Content Include="Template\clyde-master\images\image_3.jpg" />
+    <Content Include="Template\clyde-master\images\loc.png" />
+    <Content Include="Template\clyde-master\images\person_4.jpg" />
+    <Content Include="Template\clyde-master\images\work-1.jpg" />
+    <Content Include="Template\clyde-master\images\work-2.jpg" />
+    <Content Include="Template\clyde-master\images\work-3.jpg" />
+    <Content Include="Template\clyde-master\images\work-4.jpg" />
+    <Content Include="Template\clyde-master\images\work-5.jpg" />
+    <Content Include="Template\clyde-master\images\work-6.jpg" />
+    <Content Include="Template\clyde-master\images\work-7.jpg" />
+    <Content Include="Template\clyde-master\images\work-8.jpg" />
+    <Content Include="Template\clyde-master\index.html" />
+    <Content Include="Template\clyde-master\js\aos.js" />
+    <Content Include="Template\clyde-master\js\bootstrap.min.js" />
+    <Content Include="Template\clyde-master\js\google-map.js" />
+    <Content Include="Template\clyde-master\js\jquery-3.2.1.min.js" />
+    <Content Include="Template\clyde-master\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Template\clyde-master\js\jquery.animateNumber.min.js" />
+    <Content Include="Template\clyde-master\js\jquery.easing.1.3.js" />
+    <Content Include="Template\clyde-master\js\jquery.magnific-popup.min.js" />
+    <Content Include="Template\clyde-master\js\jquery.min.js" />
+    <Content Include="Template\clyde-master\js\jquery.stellar.min.js" />
+    <Content Include="Template\clyde-master\js\jquery.waypoints.min.js" />
+    <Content Include="Template\clyde-master\js\main.js" />
+    <Content Include="Template\clyde-master\js\owl.carousel.min.js" />
+    <Content Include="Template\clyde-master\js\popper.min.js" />
+    <Content Include="Template\clyde-master\js\scrollax.min.js" />
+    <Content Include="Template\clyde-master\main.html" />
+    <Content Include="Template\clyde-master\readme.txt" />
+    <Content Include="Template\clyde-master\single.html" />
     <Content Include="Template\sidebar-07\css\bootstrap.min.css" />
     <Content Include="Template\sidebar-07\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Template\sidebar-07\css\bootstrap\mixins\_screen-reader.css" />
@@ -302,12 +469,171 @@
     <Content Include="Views\AdminLayout\SidebarPartial.cshtml" />
     <Content Include="Views\AdminLayout\NavbarPartial.cshtml" />
     <Content Include="Views\AdminLayout\ScriptPartial.cshtml" />
-    <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Skill\CreateSkill.cshtml" />
+    <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Statictic\Index.cshtml" />
+    <Content Include="Views\Skill\SkillList.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\Hobby\Index.cshtml" />
+    <Content Include="Views\Hobby\CreateHobby.cshtml" />
+    <Content Include="Views\Hobby\UpdateHobby.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialFeature.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\CreateAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Adress\Index.cshtml" />
+    <Content Include="Views\Adress\CreateAdress.cshtml" />
+    <Content Include="Views\Adress\UpdateAdress.cshtml" />
+    <Content Include="Views\Banner\Index.cshtml" />
+    <Content Include="Views\Banner\CreateBanner.cshtml" />
+    <Content Include="Views\Banner\UpdateBanner.cshtml" />
+    <Content Include="Views\Contact\CreateContact.cshtml" />
+    <Content Include="Views\Contact\UpdateContact.cshtml" />
+    <Content Include="Views\Feature\Index.cshtml" />
+    <Content Include="Views\Feature\CreateFeature.cshtml" />
+    <Content Include="Views\Feature\UpdateFeature.cshtml" />
+    <Content Include="Views\Service\CreateService.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\CreateProfile.cshtml" />
+    <Content Include="Views\Profile\UpdateProfile.cshtml" />
+    <Content Include="Template\clyde-master\.DS_Store" />
+    <Content Include="Template\clyde-master\css\.DS_Store" />
+    <Content Include="Template\clyde-master\fonts\.DS_Store" />
+    <Content Include="Template\clyde-master\fonts\flaticon\.DS_Store" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="Template\clyde-master\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Template\clyde-master\images\.DS_Store" />
+    <Content Include="Template\clyde-master\js\.DS_Store" />
+    <Content Include="Template\clyde-master\prepros-6.config" />
+    <Content Include="Template\clyde-master\scss\.DS_Store" />
+    <Content Include="Template\clyde-master\scss\bootstrap\.DS_Store" />
+    <Content Include="Template\clyde-master\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_alert.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_badge.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_button-group.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_buttons.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_card.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_carousel.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_close.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_code.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_forms.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_functions.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_grid.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_images.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_input-group.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_list-group.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_media.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_mixins.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_modal.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_nav.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_navbar.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_pagination.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_popover.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_print.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_progress.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_reboot.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_root.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_spinners.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_tables.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_toasts.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_transitions.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_type.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_utilities.scss" />
+    <Content Include="Template\clyde-master\scss\bootstrap\_variables.scss" />
+    <Content Include="Template\clyde-master\scss\style.scss" />
+    <Content Include="Views\Default\PartialSkill.cshtml" />
+    <Content Include="Views\Default\PartialStatistic.cshtml" />
+    <Content Include="Views\Default\PartialServices.cshtml" />
+    <Content Include="Views\Default\PartialProject.cshtml" />
+    <Content Include="Views\Default\PartialProfile.cshtml" />
+    <Content Include="Views\Default\PartialHobby.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Default\ThankYou.cshtml" />
+    <Content Include="Views\Default\PartialAdress.cshtml" />
+    <Content Include="Views\SocialMediaLink\Index.cshtml" />
+    <Content Include="Views\SocialMediaLink\CreateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMediaLink\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Default\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="images\Banner\" />
+    <Folder Include="images\Feature\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -335,6 +661,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

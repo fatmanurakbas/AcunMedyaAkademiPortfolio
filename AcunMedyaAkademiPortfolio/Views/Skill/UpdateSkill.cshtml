@@ -1,0 +1,25 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblSkill
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Yetenek Güncelleme Sayfası</h3>
+<form method="post">
+    <label>Yetenek idsi</label>
+    <input type="text" class="form-control" name="Skilld" value="@Model.Skilld" />
+    <br />
+    <label>Yetenek Adı</label>
+    <input type="text" class="form-control" name="Title" value="@Model.Title" />
+    <br />
+    <label>Yetenek Değeri</label>
+    <input type="text" class="form-control" name="Value" value="@Model.Value" />
+    <br />
+    <label>Yetenek Geçen Haftalık Değeri</label>
+    <input type="text" class="form-control" name="LastWeekValue" value="@Model.LastWeekValue" />
+    <br />
+    <label>Geçen Aylık Değeri</label>
+    <input type="text" class="form-control" name="LastMonthValue" value="@Model.LastMonthValue" />
+    <br />
+    <button class="btn btn-info">Yeteneği Güncelle</button>
+</form>

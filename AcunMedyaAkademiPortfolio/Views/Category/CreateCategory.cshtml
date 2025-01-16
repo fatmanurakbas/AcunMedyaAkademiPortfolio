@@ -1,0 +1,16 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblCategory
+
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Yeni Kategori Ekleme</h2>
+<form method="post">
+    <label>Kategori ismi</label>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kategoriyi Kaydet</button>
+</form>

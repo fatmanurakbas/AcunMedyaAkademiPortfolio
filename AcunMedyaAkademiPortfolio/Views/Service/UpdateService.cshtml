@@ -1,0 +1,22 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Servis Güncelleme</h2>
+@using (Html.BeginForm("UpdateService", "Service", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Serviceld)
+
+    <label>Servis Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <label>Fotoğraf Yükle</label>
+    <input type="file" name="ServiceImage" class="form-control" />
+
+    <label>Servis Açıklaması</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br/>
+    <button type="submit" class="btn btn-info">Projeyi Güncelle</button>
+}

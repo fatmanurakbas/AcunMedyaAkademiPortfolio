@@ -1,0 +1,30 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblProfile
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Profil Güncelleme</h2>
+@using (Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Profield)
+
+    <label>İsim-Soyisim</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+    <label>Doğum Günü (Gün-Ay-Yıl)</label>
+    @Html.TextBoxFor(x => x.Birthday, new { @class = "form-control" })
+
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Adrees, new { @class = "form-control" })
+
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+
+    <label>Telefon No</label>
+    @Html.TextBoxFor(x => x.Telefone, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-info">Profili Güncelle</button>
+}
+

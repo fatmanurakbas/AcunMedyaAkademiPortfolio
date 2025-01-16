@@ -1,0 +1,21 @@
+﻿@model List<AcunMedyaAkademiPortfolio.Models.tblHobby>
+
+<div class="col-md-12">
+    <div class="my-interest d-lg-flex w-100 flex-wrap">
+        <!-- flex-wrap ile taşmalar engellenir -->
+
+        @foreach (var item in Model)
+        {
+            <!-- Sadece resim yolu ve başlığı olan kayıtları kontrol ediyoruz -->
+            if (!string.IsNullOrEmpty(item.IconUrl) && !string.IsNullOrEmpty(item.Title))
+            {
+                <div class="interest-wrap d-flex align-items-center">
+                    <div class="icon d-flex align-items-center justify-content-center" style="background-image: url('@Url.Content(item.IconUrl)'); background-size: cover; background-position: center; width: 50px; height: 50px; border-radius: 50%;">
+                    </div>
+                    <div class="text">@item.Title</div>
+                </div>
+            }
+        }
+
+    </div>
+</div>

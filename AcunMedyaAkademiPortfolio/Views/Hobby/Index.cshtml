@@ -1,0 +1,43 @@
+﻿@model List<AcunMedyaAkademiPortfolio.Models.tblHobby>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hobbies Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>İcon</th>
+        <th>Title</th>
+        
+    </tr>
+
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.HobbyId</td>
+
+
+                <td><img src="@item.IconUrl" alt="Icon" width="50" /></td>
+                <td>@item.Title</td>
+                <td>
+                    <a href="/Hobby/UpdateHobby/@item.HobbyId" class="btn btn-warning">Güncelle</a>
+                    <a href="/Hobby/DeleteHobby/@item.HobbyId" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr><td colspan="4">Tabloda Hobby Bulunmamaktadır.</td></tr>
+    }
+</table>
+
+<a href="/Hobby/CreateHobby" class="btn btn-success">Yeni Hobby Ekle</a>
+
+

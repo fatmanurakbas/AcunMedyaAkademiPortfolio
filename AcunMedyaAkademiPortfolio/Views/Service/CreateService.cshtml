@@ -1,0 +1,22 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblService
+@{
+    ViewBag.Title = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Yeni Servis Ekleme</h2>
+<form method="post">
+    <label>Servis Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Servis Açıklaması</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Servis Resmi</label>
+    <input type="file" name="ServiceImage" class="form-control" />
+    <br />
+
+    <button class="btn btn-info">Servisi Kaydet</button>
+</form>
+

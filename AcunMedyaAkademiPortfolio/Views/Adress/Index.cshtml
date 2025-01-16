@@ -1,0 +1,36 @@
+﻿@model List<AcunMedyaAkademiPortfolio.Models.TblAdress>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Adress Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>Adress</td>
+        <td>Telefon No</td>
+        <td>Email</td>
+        <td>Website</td>
+
+    </tr>
+    @foreach (var item in Model) // buradaki model ile toblodaki verileri tutyoruz
+    {
+        <tr>
+            <td>@item.AdressId</td>
+            <td>@item.Adress</td>
+            <td>@item.Phone</td>
+            <td>@item.Email</td>
+            <td>@item.Website</td>
+            <br/>
+            <td><a href="/Adress/UpdateAdress/@item.AdressId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Adress/DeleteAdress/@item.AdressId" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+
+    }
+</table>
+<th><a href="/Adress/CreateAdress" class="btn d-block btn-success">Yeni Adres Ekle</a></th>
+

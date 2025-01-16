@@ -1,0 +1,26 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblAdress
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Adres Ekleme</h2>
+
+<form method="post">
+    <label>Adress</label>
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+    <br />
+    <label>Telefon No</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>E-mail</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Website</label>
+    @Html.TextBoxFor(x => x.Website, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">About Kaydet</button>
+</form>
+

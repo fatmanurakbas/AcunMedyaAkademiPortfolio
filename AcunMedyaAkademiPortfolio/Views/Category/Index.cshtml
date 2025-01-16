@@ -1,12 +1,37 @@
-﻿
+﻿@model List<AcunMedyaAkademiPortfolio.Models.TblCategory>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h3>Merhaba Dünya</h3>
-<div style="background-color:aqua"> bu bir divdir. </div>
-<br />
-<div style="background-color: red"> kırmızı </div>
+<h2>Kategori Listesi</h2>
 
-<hr />
-<a href="http://www.google.com "> Google a git </a>
+<table class="table table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>Kategori Adı</td>
+
+    </tr>
+
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a>
+                    <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr><td colspan="4">Tabloda Kategori Bulunmamaktadır.</td></tr>
+    }
+</table>
+<th><a href="/Category/CreateCategory" class="btn d-block btn-success">Yeni Kategori Ekle</a></th>
+

@@ -1,0 +1,28 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblAbout
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateAbout</h2>
+
+
+
+
+<h2>About Güncelleme</h2>
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.AbaoutId)
+
+    <label>Proje Adı</label>
+    @Html.TextBoxFor(x => x.Descrition, new { @class = "form-control" })
+    <label>About Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <label>Fotoğraf Yükle</label>
+    <input type="file" name="AboutImage" class="form-control" />
+
+
+
+    <button type="submit" class="btn btn-info">About Güncelle</button>
+}

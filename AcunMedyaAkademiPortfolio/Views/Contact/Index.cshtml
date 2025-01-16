@@ -1,20 +1,40 @@
-﻿
+﻿@model List<AcunMedyaAkademiPortfolio.Models.TblContact>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<div style="background-color:yellow; margin-left:100px; margin-right:100px"">
-    <h3> Mesaj Gönderme Sayfası</h3>
-    <label> Adınız Soyadınız </label>
-    <input type="text" />
-    <br />
-    <label> Mail </label>
-    <input type="text" />
-    <br />
-    <label> Konu </label>
-    <input type="text" />
-    <br />
-    <label> Mesajınız </label>
-    <textarea rows="12"></textarea>
-    <br />
 
-</div>
+<h2>İletişim Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>İsim-Soyisim</td>
+        <td>Konu</td>
+        <td>Email</td>
+        <td>Açıklama</td>
+        <td>Gün</td>
+
+
+    </tr>
+    @foreach (var item in Model) // buradaki model ile toblodaki verileri tutyoruz
+    {
+        <tr>
+            <td>@item.ContectId</td>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.Email</td>
+            <td>@item.Description</td>
+            <td>@item.CreateDate</td>
+            <br />
+            <td><a href="/Contact/UpdateContact/@item.ContectId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Contact/DeleteContact/@item.ContectId" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+
+    }
+</table>
+<th><a href="/Contact/CreateContact" class="btn d-block btn-success">Yeni İletişim Bilgileri Ekle</a></th>
+
+

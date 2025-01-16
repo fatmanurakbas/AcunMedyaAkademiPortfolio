@@ -1,0 +1,22 @@
+﻿@model List<AcunMedyaAkademiPortfolio.Models.SocialMediaLink>
+<ul class="ftco-footer-social list-unstyled mt-2">
+    @foreach (var item in Model.GroupBy(x => x.PlatformName).Select(g => g.First()))
+    {
+        <li class="ftco-animate">
+            <a href="@item.Url">
+                @if (item.PlatformName == "GitHub")
+                {
+                    <span class="fa fa-github"></span>
+                }
+                else if (item.PlatformName == "LinkedIn")
+                {
+                    <span class="fa fa-linkedin"></span>
+                }
+                else if (item.PlatformName == "Instagram")
+                {
+                    <span class="fa fa-instagram"></span>
+                }
+            </a>
+        </li>
+    }
+</ul>

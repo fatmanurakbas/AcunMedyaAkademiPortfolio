@@ -1,0 +1,21 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.SocialMediaLink
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Sosyal Medya Platformunu Güncelleme</h2>
+@using (Html.BeginForm("UpdateSocialMedia", "SocialMediaLink", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.SocialMediaLinkId)
+
+    <label>Platform Adı</label>
+    @Html.TextBoxFor(x => x.PlatformName, new { @class = "form-control" })
+
+    <label>Sosyal Medya Platformu URL'si'</label>
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-info">Sosyal Medya Platformunu Güncelle</button>
+}
+

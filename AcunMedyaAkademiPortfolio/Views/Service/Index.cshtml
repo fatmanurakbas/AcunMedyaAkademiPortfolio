@@ -1,8 +1,36 @@
-﻿
+﻿@model List<AcunMedyaAkademiPortfolio.Models.TblService>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Servislerim</h2>
+<h2>Servis Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>Servis Başlığı</td>
+        <td>Servis Açıklaması</td>
+        <td>Servis Resmi</td>
+
+    </tr>
+    @foreach (var item in Model) // buradaki model ile toblodaki verileri tutyoruz
+    {
+        <tr>
+            <td>@item.Serviceld</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+
+            <td>
+                <img src="@item.IconUrl" alt="Service Image" class="img-thumbnail" style="max-width:75px; max-height:75px;" />
+            </td>
+            <td><a href="/Service/UpdateService/@item.Serviceld" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Service/DeleteService/@item.Serviceld" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+
+    }
+</table>
+<th><a href="/Service/CreateService" class="btn d-block btn-success">Yeni Servis Ekle</a></th>
 

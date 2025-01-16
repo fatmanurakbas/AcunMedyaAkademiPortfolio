@@ -1,0 +1,21 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.SocialMediaLink
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Sosyla Medya Platformu Ekleme</h2>
+
+<form method="post">
+    <label>Platform Adı</label>
+    @Html.TextBoxFor(x => x.PlatformName, new { @class = "form-control" })
+    <br />
+    <label>Sosyal Medya IRL'si</label>
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Sosyla Medya Platformunu Kaydet</button>
+</form>
+
