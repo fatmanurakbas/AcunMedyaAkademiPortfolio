@@ -57,7 +57,7 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
   - ![Yeni Servis Ekleme](https://github.com/user-attachments/assets/0bd19237-5f52-4eb8-b278-9009329a2aff)
 
 - **Servis Güncelleme**
-  - ![Servis Güncelleme](https://github.com/user-attachments/assets/ce43312b-63f0-4a3a-b7d4-ed2a5baf1285)
+  - ![Servis Güncelleme](https://github.com/user-attachments/assets/d3dbd7ed-15d1-433f-8f15-e25085af601f)
 
 ## 📈 İstatistikler
 - ![İstatistikler](https://github.com/user-attachments/assets/75f4f1f5-15d7-4459-8ede-37148c93526f)
