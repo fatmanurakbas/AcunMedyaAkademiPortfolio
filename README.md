@@ -11,16 +11,6 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 - **İletişim**: Ziyaretçilerin benimle kolayca iletişim kurabileceği bir form.
 
 ## 🛠️Teknolojiler
--**ASP.NET MVC**: Model-View-Controller yapısıyla dinamik ve modüler web uygulamaları geliştirme.
--**LINQ Sorguları**: Veri sorgulama ve manipülasyon işlemlerinde kullanılan güçlü sorgulama dili.
--**Db First Yaklaşımı**: Mevcut bir veritabanından model oluşturma yaklaşımı.
--**CRUD İşlemleri**: Veritabanında Create, Read, Update ve Delete işlemlerini gerçekleştirme.
--**Partial View Kullanımı**: Kod tekrarını azaltmak için sayfa bileşenlerinin yeniden kullanılabilir kısımlarını oluşturma.
--**Entity Framework**: Veritabanı işlemlerini kolaylaştırmak için kullanılan ORM (Object-Relational Mapping) aracı.
--**HTML, CSS, Bootstrap**: Kullanıcı arayüzünü tasarlamak ve duyarlı (responsive) tasarımlar oluşturmak için kullanılan teknolojiler.
--**JavaScript**: Etkileşimli kullanıcı deneyimleri sunmak için kullanılan betik dili.
--**MSSQL Server**: Verilerin güvenli ve ölçeklenebilir bir şekilde saklandığı ilişkisel veritabanı yönetim sistemi.
--**Layout Yapılandırması**: Sayfa düzeni ve tasarım şablonlarının yapılandırılması.
 
 -🖥️**ASP.NET MVC**: Model-View-Controller yapısıyla dinamik ve modüler web uygulamaları geliştirme.
 -📊**LINQ Sorguları**: Veri sorgulama ve manipülasyon işlemlerinde kullanılan güçlü sorgulama dili.
@@ -59,7 +49,7 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 ## 🛠️ Admin Paneli
 
 - **Servisler**
-  - ![Servislerim1](https://github.com/user-attachments/assets/d4b7a535-5817-4a86-8a93-a0505c5f3f72)
+  - ![Servislerim1](https://github.com/user-attachments/assets/3b89b0f1-8bd4-457a-9bac-7295f1ad159a)
   - ![Servislerim2](https://github.com/user-attachments/assets/9e810acf-3ff4-4560-923b-068b6ca330b4)
 
 - **Yeni Servis Ekleme**
