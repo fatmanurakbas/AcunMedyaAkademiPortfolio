@@ -69,7 +69,7 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 - Proje Visual Studio 2022 ile geliştirildi.
 
 ## 📞 Destek
-Bu projeyle ilgili herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen [e-posta adresiniz](fatmanurakb1616@gmail.com) üzerinden iletişime geçin.
+Bu projeyle ilgili herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen [e-posta adresiniz](ftmnrakb8585@gmail.com) üzerinden iletişime geçin.
 
 ## 🎉 Teşekkür
 Bu projeyi geliştirme sürecimde sundukları değerli bilgi ve destekleri için Murat Yücedağ ve Buse Nur Demirbaş’a içten teşekkürlerimi sunarım. Rehberlikleri, projenin her aşamasında büyük bir katkı sağladı ve süreci daha verimli ve keyifli hale getirdi. Birlikte daha nice projelere imza atma umuduyla! 🙏
