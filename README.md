@@ -7,7 +7,7 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 - **Yeteneklerim**: Sahip olduğum teknik ve profesyonel becerilerin sergilendiği kapsamlı bir liste.
 - **Hizmetlerim**: Sağladığım hizmetlerin detaylı açıklamalarını içeren bölüm.
 - **Projelerim**: Üzerinde çalıştığım ve tamamladığım projelere dair ayrıntılı bilgiler.
-- **Referanslarım**: Daha önceki iş deneyimlerim ve işbirliklerimden elde edilen geri bildirimler.
+- **Referanslarım**: Daha önceki iş deneyimlerim ve işbirliklerimden elde edilen geri.bildirimler.
 - **İletişim**: Ziyaretçilerin benimle kolayca iletişim kurabileceği bir form.
 
 ## 🛠️ Teknolojik Altyapı
